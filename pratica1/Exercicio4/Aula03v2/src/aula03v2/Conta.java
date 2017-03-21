@@ -3,10 +3,21 @@ public class Conta {
     private int numero;
     private Cliente titular;
     private double saldo;
+    private static int totalDeContas;
     
-    public Conta(int numero, String nome, String sobrenome, String cpf){
+    public Conta(int numero, String nome, String sobrenome, String cpf, double saldo){
         this.titular = new Cliente(nome, sobrenome, cpf);
         this.numero = numero;
+        this.saldo = saldo;
+        Conta.totalDeContas = Conta.totalDeContas + 1;
+    }
+    
+    public int getNumero(){
+        return this.numero;
+    }
+    
+    public void setNumero(int num){
+        this.numero = num;
     }
     
     void visualizarSaldo(){
@@ -17,6 +28,10 @@ public class Conta {
         if (valor > 0){
             this.saldo = this.saldo + valor;
         }
+    }
+    
+    public static int getTotalDeContas(){
+        return Conta.totalDeContas;
     }
     
     void VisualizarConta (){

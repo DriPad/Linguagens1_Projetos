@@ -5,8 +5,8 @@ public class Aula03v2 {
 
     public static void main(String[] args) {
        
-       Conta c1 = new Conta(1, "Adriana", "Padilla", "455.950.418-03");
-       c1.saldo = 1000;
+       Conta c1 = new Conta(1, "Adriana", "Padilla", "455.950.418-03", 2000);
+       
        c1.VisualizarConta();
        
        /*c1.visualizarSaldo();
