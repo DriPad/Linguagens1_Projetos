@@ -1,13 +1,13 @@
 package testeheranca;
 
 public class Vendedor {
-    private String nomeCompleto;
-    private String cpf;
-    private int registro;
-    private double totalVendas;
-    private double horasExtras;
-    private double salarioBase;
-    private static double taxaComissao = 0.3;
+    protected String nomeCompleto;
+    protected String cpf;
+    protected int registro;
+    protected double totalVendas;
+    protected double horasExtras;
+    protected double salarioBase;
+    protected static double taxaComissao = 0.3;
     private int gerenteVendas;
     
     public Vendedor(String n, String c, int r, double sal, double horas, GerenteVendas g){
