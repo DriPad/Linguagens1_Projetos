@@ -5,11 +5,12 @@ public class GerenteVendas extends Vendedor {
     private int numVendedores;
     
     public GerenteVendas(String n, String c, int r, double s, double h){
-        this.nomeCompleto = n;
+        super(n, c, r, s, h);
+        /*this.nomeCompleto = n;
         this.cpf = c;
         this.registro = r;
         this.salarioBase = s;
-        this.horaExtra = h;
+        this.horasExtras = h; */
     }
     
     
