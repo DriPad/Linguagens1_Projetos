@@ -1,5 +1,5 @@
 package testeheranca2;
 
-public class Gerente {
+public class Gerente extends Funcinario {
     
 }

@@ -8,9 +8,9 @@ public class Funcinario {
     protected double horaExtra;
     
     
-    public double bonus(){
-        
+    public double calcularBonus(double bIndividual){
+        return bIndividual;
     }
-    
+   
 }
 
