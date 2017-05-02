@@ -1,18 +1,13 @@
 package testeheranca2;
 
-public class Funcinario {
+public abstract class Funcinario {
     protected String nome;
     protected String cpf;
     protected int registro;
     protected double salarioBase;
     protected double horaExtra;
     
-    public Funcinario(String n, String cpf, int reg, double sal){
-        this.setNome(n);
-        this.setCpf(cpf);
-        this.setRegistro(reg);
-        this.setSalarioBase(sal);
-    }
+
     
     
     public double calcularBonus(double bIndividual){

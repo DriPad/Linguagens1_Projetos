@@ -24,16 +24,17 @@ public class Concessionaria {
         
         for (int i = 0; i < this.nGerente; i++) {
             totalVendas += this.vendedor[i].getVendas();
-        }        
+        }
+        return totalVendas;
     }
     
     
     public boolean novoVendedor(String n, String cpf, int reg, double salario){
         boolean result;
         
-        if ( this.nVendedor < this.vendedor.length ) {
+        if (nVendedor < vendedor.length ) {
             
-            this.vendedor[this.nVendedor] = new Vendedor(n, cpf, reg, salario);
+            vendedor[nVendedor] = new Vendedor(n, cpf, reg, salario);
             this.nVendedor++;
             result = false;
         } else
@@ -58,7 +59,7 @@ public class Concessionaria {
     }
     
     public double bonificacaoConcessionaria(){
-        return ( (this.calcularTotalvendas() / this.totalFuncionarios)*this.taxaBonus);
+        return ( (this.calcularTotalVendas() / this.totalFuncionarios)*this.taxaBonus);
     }
     
     public void setTaxaBonus (double tx){

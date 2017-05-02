@@ -1,11 +1,13 @@
 package testeheranca2;
 
 public class Gerente extends Funcinario {
-    
-    
+    private double vendas;
+    private int vendedor;
 
-    Gerente(String n, String cpf, int reg, double salario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Gerente(String n, String cpf, int reg, double sal) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.registro = registro;
     }
     
     public double getVendas(){
@@ -20,6 +22,7 @@ public class Gerente extends Funcinario {
         return this.calcularBonus(bIndividual) + this.salarioBase;
     }
     
+    @Override
     public void exibirResumo(){
         super.exibirResumo();
         System.out.println("Vendas:" + this.vendas);
