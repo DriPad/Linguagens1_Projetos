@@ -10,6 +10,7 @@ public class Concessionaria {
     private Vendedor[] vendedor;
     private Gerente[] gerente;
     
+    
     public Concessionaria(int nVend, int nGer){
         vendedor = new Vendedor[nVend];
         gerente = new Gerente[nGer];
@@ -23,6 +24,7 @@ public class Concessionaria {
         }
         
         for (int i = 0; i < this.nGerente; i++) {
+            
             totalVendas += this.vendedor[i].getVendas();
         }
         return totalVendas;
