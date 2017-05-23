@@ -89,11 +89,12 @@ package concessionaria;
             
         }
         
-        public boolean contabilizarVenda(double valor){
+        public double contabilizarVenda(double valor){
             if (valor > 0){
                 this.totalVendas = valor + this.totalVendas;
-                return 
+                return this.totalVendas;
             }
+            return 0;
         }
         
         public void exibirResumo(){
