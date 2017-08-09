@@ -149,6 +149,7 @@ public class Tela2 extends javax.swing.JFrame {
 
         BotaoIgual.setText("=");
 
+        tela.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         tela.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 telaActionPerformed(evt);
@@ -228,20 +229,18 @@ public class Tela2 extends javax.swing.JFrame {
 
     private void Botao6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao6ActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + 6);
+        jTextField1.setText(jTextField1.getText() + "6");
+        
     }//GEN-LAST:event_Botao6ActionPerformed
 
     private void Botao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao2ActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + 2);
+        jTextField1.setText(jTextField1.getText() + "2");
     }//GEN-LAST:event_Botao2ActionPerformed
 
     private void Botao0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao0ActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + 0);
+        jTextField1.setText(jTextField1.getText() + "0");
     }//GEN-LAST:event_Botao0ActionPerformed
 
     private void telaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telaActionPerformed
@@ -251,68 +250,58 @@ public class Tela2 extends javax.swing.JFrame {
 
     private void Botao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao1ActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + 1);
+        jTextField1.setText(jTextField1.getText() + "1");
     }//GEN-LAST:event_Botao1ActionPerformed
 
     private void Botao3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao3ActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + 3);
+        jTextField1.setText(jTextField1.getText() + "3");
     }//GEN-LAST:event_Botao3ActionPerformed
 
     private void Botao4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao4ActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + 4);
+        jTextField1.setText(jTextField1.getText() + "4");
     }//GEN-LAST:event_Botao4ActionPerformed
 
     private void Botao5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao5ActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + 5);
+        jTextField1.setText(jTextField1.getText() + "5");
     }//GEN-LAST:event_Botao5ActionPerformed
 
     private void Botao7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao7ActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + 7);
+        
+        jTextField1.setText(jTextField1.getText() + "7");
     }//GEN-LAST:event_Botao7ActionPerformed
 
     private void Botao8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao8ActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + 8);
+        jTextField1.setText(jTextField1.getText() + "8");
     }//GEN-LAST:event_Botao8ActionPerformed
 
     private void Botao9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao9ActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + 9);
+        jTextField1.setText(jTextField1.getText() + "9");
     }//GEN-LAST:event_Botao9ActionPerformed
 
     private void BotaoSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSomaActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + "+");
+        jTextField1.setText(jTextField1.getText() + "+");
     }//GEN-LAST:event_BotaoSomaActionPerformed
 
     private void BotaoSubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSubtracaoActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + "-");
+        jTextField1.setText(jTextField1.getText() + "-");
     }//GEN-LAST:event_BotaoSubtracaoActionPerformed
 
     private void BotaoMultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoMultiplicacaoActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + "*");
+        jTextField1.setText(jTextField1.getText() + "*");
     }//GEN-LAST:event_BotaoMultiplicacaoActionPerformed
 
     private void BotaoDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoDivisaoActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + "/");
+        jTextField1.setText(jTextField1.getText() + "/");
     }//GEN-LAST:event_BotaoDivisaoActionPerformed
 
     /**
