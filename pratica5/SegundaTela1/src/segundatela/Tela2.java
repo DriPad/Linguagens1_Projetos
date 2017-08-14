@@ -11,6 +11,7 @@ package segundatela;
  */
 public class Tela2 extends javax.swing.JFrame {
 
+
     /**
      * Creates new form Tela2
      */
@@ -148,7 +149,13 @@ public class Tela2 extends javax.swing.JFrame {
         });
 
         BotaoIgual.setText("=");
+        BotaoIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoIgualActionPerformed(evt);
+            }
+        });
 
+        tela.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         tela.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 telaActionPerformed(evt);
@@ -228,92 +235,95 @@ public class Tela2 extends javax.swing.JFrame {
 
     private void Botao6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao6ActionPerformed
         
-        String valor = tela.getText();
-        tela.setText(valor + 6);
+        tela.setText(tela.getText() + "6");
+        
+        
     }//GEN-LAST:event_Botao6ActionPerformed
 
     private void Botao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao2ActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + 2);
+        tela.setText(tela.getText() + "2");
     }//GEN-LAST:event_Botao2ActionPerformed
 
     private void Botao0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao0ActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + 0);
+        tela.setText(tela.getText() + "0");
     }//GEN-LAST:event_Botao0ActionPerformed
 
     private void telaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telaActionPerformed
         
-     
+        
+        
+        
     }//GEN-LAST:event_telaActionPerformed
 
     private void Botao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao1ActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + 1);
+        tela.setText(tela.getText() + "1");
     }//GEN-LAST:event_Botao1ActionPerformed
 
     private void Botao3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao3ActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + 3);
+        tela.setText(tela.getText() + "3");
     }//GEN-LAST:event_Botao3ActionPerformed
 
     private void Botao4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao4ActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + 4);
+        tela.setText(tela.getText() + "4");
     }//GEN-LAST:event_Botao4ActionPerformed
 
     private void Botao5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao5ActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + 5);
+        tela.setText(tela.getText() + "5");
     }//GEN-LAST:event_Botao5ActionPerformed
 
     private void Botao7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao7ActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + 7);
+        tela.setText(tela.getText() + "7");
     }//GEN-LAST:event_Botao7ActionPerformed
 
     private void Botao8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao8ActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + 8);
+        tela.setText(tela.getText() + "8");
     }//GEN-LAST:event_Botao8ActionPerformed
 
     private void Botao9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao9ActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + 9);
+        tela.setText(tela.getText() + "9");
     }//GEN-LAST:event_Botao9ActionPerformed
 
     private void BotaoSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSomaActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + "+");
+        tela.setText(tela.getText() + "+");
     }//GEN-LAST:event_BotaoSomaActionPerformed
 
     private void BotaoSubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSubtracaoActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + "-");
+        tela.setText(tela.getText() + "-");
+
     }//GEN-LAST:event_BotaoSubtracaoActionPerformed
 
     private void BotaoMultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoMultiplicacaoActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + "*");
+        tela.setText(tela.getText() + "x");
+
     }//GEN-LAST:event_BotaoMultiplicacaoActionPerformed
 
     private void BotaoDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoDivisaoActionPerformed
-        
-        String valor = tela.getText();
-        tela.setText(valor + "/");
+        tela.setText(tela.getText() + "/");
     }//GEN-LAST:event_BotaoDivisaoActionPerformed
+
+    private void BotaoIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoIgualActionPerformed
+        String[] visor = {"v1+v2"};
+        String v1 = "";
+        
+        String v2 = "";
+       
+        
+        
+        for (int i = 0; i < visor.length; i++) {
+            String[] partes = new String[2];
+            partes = visor[i].split("+");
+            v1 = partes[0];
+            v2 = partes[2];
+            
+        }
+        
+        String s = soma(v1, v2);
+        
+        
+        tela.setText("" + s);
+        
+       
+    }//GEN-LAST:event_BotaoIgualActionPerformed
 
     /**
      * @param args the command line arguments
@@ -348,6 +358,17 @@ public class Tela2 extends javax.swing.JFrame {
                 new Tela2().setVisible(true);
             }
         });
+        
+    }
+    
+    private String soma(String v1, String v2){
+        int v1Int = Integer.parseInt(v1);
+        int v2Int = Integer.parseInt(v2);
+            
+        int soma = v1Int + v2Int;
+        String t = Integer.toString(soma);
+        
+        return t;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -369,4 +390,6 @@ public class Tela2 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField tela;
     // End of variables declaration//GEN-END:variables
+
+    
 }
