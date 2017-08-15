@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="496.0" prefWidth="462.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="cadastro.FXMLDocumentController">
+   <children>
+      <TabPane prefHeight="503.0" prefWidth="462.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Cadastro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="478.0">
+                     <children>
+                        <Label layoutX="182.0" layoutY="45.0" text="Nome:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="183.0" layoutY="123.0" text="Idade:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="185.0" layoutY="200.0" text="Endereço:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="183.0" layoutY="349.0" prefHeight="17.0" prefWidth="30.0" text="RG:" />
+                        <Label layoutX="183.0" layoutY="275.0" prefHeight="17.0" prefWidth="29.0" text="CPF:" />
+                        <ImageView fitHeight="105.0" fitWidth="125.0" layoutX="14.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+                        <TextField fx:id="txtNome" layoutX="182.0" layoutY="81.0" prefHeight="25.0" prefWidth="245.0" />
+                        <TextField fx:id="txtIdade" layoutX="182.0" layoutY="153.0" prefHeight="25.0" prefWidth="245.0" />
+                        <TextField fx:id="txtEndereco" layoutX="183.0" layoutY="227.0" prefHeight="25.0" prefWidth="244.0" />
+                        <TextField fx:id="txtCpf" layoutX="184.0" layoutY="304.0" prefHeight="25.0" prefWidth="243.0" />
+                        <TextField fx:id="txtRg" layoutX="185.0" layoutY="373.0" prefHeight="25.0" prefWidth="241.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Pesquisar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="599.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

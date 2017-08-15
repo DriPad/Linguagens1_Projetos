@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="olajavafx.FXMLDocumentController">
+    <children>
+      <Label fx:id="lblPrimeiro" layoutX="40.0" layoutY="31.0" text="Texto aqui" />
+      <Button fx:id="btnPrimeiro" layoutX="112.0" layoutY="142.0" mnemonicParsing="false" onAction="#cliqueBotao" text="Clique em mim">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+    </children>
+</AnchorPane>
