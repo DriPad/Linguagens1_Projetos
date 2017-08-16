@@ -10,7 +10,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -19,12 +21,25 @@ import javafx.scene.control.Label;
 public class FXMLDocumentController implements Initializable {
     
     @FXML
-    private Label label;
+    private Label lblNome;
+    private Label lblIdade;
+    private Label lblEbdereco;
+    private Label lblCpf;
+    private Label lblRg;
+    private Label lblSucesso;
+    private TextField txtNome;
+    private TextField txtIdade;
+    private TextField txtEndereco;
+    private TextField txtCpf;
+    private TextField txtRg;
+    private Button btnEnviar;
+    
+    
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+    private void btnEnviar(ActionEvent event) {
+        
+        lblSucesso.setText("Cadastro efetuado com sucesso!");
     }
     
     @Override
