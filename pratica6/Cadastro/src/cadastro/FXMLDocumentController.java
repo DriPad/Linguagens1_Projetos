@@ -7,12 +7,19 @@ package cadastro;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.*;
+
+
 
 /**
  *
@@ -26,7 +33,6 @@ public class FXMLDocumentController implements Initializable {
     private Label lblEbdereco;
     private Label lblCpf;
     private Label lblRg;
-    private Label lblSucesso;
     private TextField txtNome;
     private TextField txtIdade;
     private TextField txtEndereco;
@@ -37,9 +43,20 @@ public class FXMLDocumentController implements Initializable {
     
     
     @FXML
-    private void btnEnviar(ActionEvent event) {
-        
-        lblSucesso.setText("Cadastro efetuado com sucesso!");
+    private void btnEnviar(ActionEvent event) throws IOException {
+        try {
+
+	      File file = new File("c:\\newfile.txt");
+
+	      if (file.createNewFile()){
+	        System.out.println("File is created!");
+	      }else{
+	        System.out.println("File already exists.");
+	      }
+
+    	} catch (IOException e) {
+	      e.printStackTrace();
+	}
     }
     
     @Override
