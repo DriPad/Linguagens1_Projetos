@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Aluno 17
+ * @author ADRIANA
  */
 public class Cadastro extends Application {
     
@@ -22,6 +22,7 @@ public class Cadastro extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
+        
         
         stage.setScene(scene);
         stage.show();
