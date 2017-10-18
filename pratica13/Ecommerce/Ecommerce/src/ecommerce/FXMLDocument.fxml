@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="lblDescricaoProduto" prefHeight="372.0" prefWidth="510.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ecommerce.FXMLDocumentController">
+   <children>
+      <Label fx:id="lblCadastrar" layoutX="191.0" layoutY="59.0" text="Cadastrar produto" />
+      <Label fx:id="lblNomeProduto" layoutX="88.0" layoutY="140.0" text="Nome do produto: " />
+      <Label layoutX="88.0" layoutY="186.0" text="Descrição do produto: " />
+      <Label fx:id="lblPrecoProduto" layoutX="88.0" layoutY="232.0" text="Preço do produto: " />
+      <TextField fx:id="txtNomeProduto" layoutX="217.0" layoutY="136.0" />
+      <TextField fx:id="txtDescricaoProduto" layoutX="217.0" layoutY="182.0" />
+      <TextField fx:id="txtPrecoProduto" layoutX="217.0" layoutY="228.0" />
+      <Button fx:id="btnCadastrar" layoutX="207.0" layoutY="293.0" mnemonicParsing="false" onAction="#cadastrarProduto" prefHeight="25.0" prefWidth="97.0" text="Cadastrar" />
+   </children>
+</AnchorPane>
