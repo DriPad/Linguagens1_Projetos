@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.com.adriana.cadastrobanco;
 
 import java.io.BufferedWriter;
@@ -56,32 +52,57 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void cadastrar(ActionEvent event) throws IOException {
         String nome = txtNome.getText();
-        String idade = txtIdade.getText();
+        int idade = Integer.parseInt(txtIdade.getText());
         String end = txtEndereco.getText();
         String rg = txtRg.getText();
         String cpf = txtCpf.getText();
-        
-        Connection conexao = ConnectionFactory.getConnection();
-        
-        String sql = "INSERT INTO cadastro(nome, idade, endereco, rg, cpf) VALUES (?,?,?,?,?)";
-        
-        PreparedStatement pa;
-        
-        
-        try {
-            pa = conexao.prepareStatement(sql);
-            pa.setString(1, "Tiago");
-            pa.setInt(2, 15);
-            pa.setString(3, "Rua São Paulo");
-            pa.setString(4, "8347238947");
-            pa.setString(5, "00191822");
-            pa.execute();
-        } catch (SQLException ex) {
-           
+
+        //if (!file.exists()) {
+
+            Connection conexao = ConnectionFactory.getConnection();
+            String sql = "INSERT INTO tblaluno (nome, idade, endereco, rg, cpf) VALUES (?,?,?,?,?)";
+            PreparedStatement ps;
+
+            try {
+                ps = conexao.prepareStatement(sql);
+
+                ps.setString(1, nome);
+                ps.setInt(2, idade);
+                ps.setString(3, end);
+                ps.setString(4, rg);
+                ps.setString(5, cpf);
+
+                ps.execute();
+                ps.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(FXMLDocumentController.class.getName()).
+                        log(Level.SEVERE, null, ex);
+            }
+        //} else {
+          //  System.out.println("O aluno já está cadastrado!");
+        //}
+
     }
+
+    @FXML
+    private void adicionarImagem(ActionEvent event) throws MalformedURLException {
+        FileChooser chooser = new FileChooser();
+        chooser.setTitle("Open File");
+        FileChooser.ExtensionFilter extFilterJPG = new FileChooser.ExtensionFilter("JPG files (*.jpg)", "*.JPG");
+        FileChooser.ExtensionFilter extFilterPNG = new FileChooser.ExtensionFilter("PNG files (*.png)", "*.PNG");
+        chooser.getExtensionFilters().addAll(extFilterJPG, extFilterPNG);
+        File file = chooser.showOpenDialog(imgView.getScene().getWindow());
+
+        URL url = file.toURI().toURL();
+        //imgView.setImage(url);
+        imgView.setImage(new Image(url.toExternalForm()));
+
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb
+    ) {
+        // TODO
+    }
+
 }
-        
-
-   
-
-

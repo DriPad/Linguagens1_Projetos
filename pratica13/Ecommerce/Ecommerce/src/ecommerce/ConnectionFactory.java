@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public class ConnectionFactory {
     public static Connection getConnection(){
         try{
-            return DriverManager.getConnection("jdbc:mysql://localhost/loja","root","");
+            return DriverManager.getConnection("jdbc:mysql://localhost/loja","root","admin");
         }
         catch (SQLException e){
             throw new RuntimeException(e);
