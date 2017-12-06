@@ -2,10 +2,8 @@ package exerciciointerface;
 
 public class Secretario extends Funcionario implements IExibicao {
     
-    public Secretario(String nome, int registro, double salario){
-        this.setNome(nome);
-        this.setRegistro(registro);
-        this.setSalario(salario);
+    public Secretario(String nome, String cpf, int registro, double salario) {
+        super(nome, cpf, registro, salario);
     }
     
     public boolean atenderTelefone(boolean ocupado){

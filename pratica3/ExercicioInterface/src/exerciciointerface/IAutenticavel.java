@@ -2,5 +2,6 @@ package exerciciointerface;
 
 public interface IAutenticavel {
     
-    boolean autentica(String senha);
+    public boolean autentica(int senha);
+    public boolean alterarSenha(int senhaNova, int senhaAntiga);
 }

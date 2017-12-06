@@ -1,10 +1,10 @@
 package exerciciointerface;
 
-public class Cliente implements IImprimivel, IAutenticavel {
+public class Cliente implements IExibicao, IAutenticavel {
     private String nome;
     private String cpf;
     private String endereco;
-    private String senha;
+    private int senha;
     private String pew;
     
     public Cliente (String nome, String cpf, String senha){
@@ -13,12 +13,11 @@ public class Cliente implements IImprimivel, IAutenticavel {
         this.pew = senha;
 
     }
-    public boolean alterarSenha(String senhaNova, String senhaAntiga){
-        boolean retorno = false;
-        
-        if (this.autentica(senhaAntiga)){
-            
-            this.pew = senhaNova;
+    
+    public boolean alterarSenha(int senhaNova, int senhaAntiga){
+        boolean retorno =false;
+        if (autentica(senhaNova)){
+            this.senha = senhaNova;
             retorno = true;
         }
         return retorno;
@@ -49,7 +48,6 @@ public class Cliente implements IImprimivel, IAutenticavel {
         System.out.println("");
     }
     
-    @Override
     public void imprimirResumo(){
         System.out.println("");
         this.exibirResumo();

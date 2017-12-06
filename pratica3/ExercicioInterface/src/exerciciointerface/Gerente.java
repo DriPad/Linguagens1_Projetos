@@ -1,19 +1,28 @@
 package exerciciointerface;
 
-public class Gerente extends Funcionario implements IAutenticavel {
-    
-    public String senha;
-    private String pew;
+public class Gerente extends Funcionario implements IAutenticavel{
+    private int senha;
 
-    Gerente(String joao, int i, int i0, String minha_senha_é) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Gerente(String nome, String cpf, int registro, double salario, int senha) {
+        super(nome, cpf, registro, salario);
+        this.senha = senha;
     }
-    
     
     @Override
-    public boolean autentica(String senha){
-        return this.pew.equals(senha);
+    public boolean autentica(int senha){
+        if(this.senha != senha) {
+            return false;}
+        return false;
     }
     
+    @Override
+    public boolean alterarSenha(int senhaNova, int senhaAntiga){
+        boolean retorno =false;
+        if (senhaAntiga==this.senha){
+            this.senha = senhaNova;
+            retorno = true;
+        }
+        return retorno;
+    }
 
 }
